@@ -41,10 +41,10 @@ FROM postgres:16
 COPY --from=builder /usr/lib/postgresql/16/lib /usr/lib/postgresql/16/lib
 COPY --from=builder /usr/share/postgresql/16/extension /usr/share/postgresql/16/extension
 
-# Если нужно, копируем конфиги или дополнительные файлы
-COPY --from=builder /home/supa /home/supa
+# # Если нужно, копируем конфиги или дополнительные файлы
+# COPY --from=builder /home/supa /home/supa
 
-# Назначаем владельца
-RUN chown -R postgres:postgres /home/supa /usr/share/postgresql/16/extension /usr/lib/postgresql/16/lib
+# # Назначаем владельца
+# RUN chown -R postgres:postgres /home/supa /usr/share/postgresql/16/extension /usr/lib/postgresql/16/lib
 
 USER postgres
