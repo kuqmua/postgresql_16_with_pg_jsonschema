@@ -1,8 +1,8 @@
 version: '3.3'
 services:
   postgres_service:
-    container_name: postgresql_16_with_pg_jsonschema_overbloat_6
-    image: postgresql_16_with_pg_jsonschema_overbloat_6
+    container_name: postgresql_16_with_pg_jsonschema
+    image: postgresql_16_with_pg_jsonschema
     restart: always
     environment:
       POSTGRES_USER: postgres
